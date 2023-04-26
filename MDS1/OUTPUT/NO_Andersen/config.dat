@@ -1,0 +1,9 @@
+100         # Temperature of the initial melting (reduced units)
+100         # Melting Velo Verlet Intagration steps
+.TRUE.      # Print thermodynamic magnitudes
+100         # Delta iterations to measure thermodynamic magnitudes
+.TRUE.      # Compute the radial distribution function
+10          # Delta iterations to compute the Rad. Dist. Func
+.FALSE.     # Time-positions of the particles (.xyz file)
+1000        # Delta iterations to save the positions
+END

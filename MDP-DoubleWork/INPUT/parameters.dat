@@ -1,0 +1,12 @@
+2048         # Number of particles (x^3 *4 ; with x natural and positive)
+0.8          # Density (reduced units)
+50           # Symulation time (reduced units)
+0.0001       # Time step (reduced units)
+2.64         # Sigma of the gas (Angstroms)
+0.045439     # Epsilon of the gas (kJ/mol)
+4.0026       # Mass (g/mol)
+.TRUE.       # To add a thermostat
+54.65        # If true, temperature of the thermostat (reduced units)
+0.01         # Precision for the radial distribution function (reduced units)
+END
+

@@ -1,0 +1,13 @@
+1372         # number of particles
+0.8         # density
+50           # final time of the simulation
+0.0005        # time step
+2.64         # sigma of the gas
+0.045439       # epsilon of the gas
+4.0026        # mass
+27.5        # initial temperature
+.FALSE.        # to put a thermostat
+54.65       # if true, temperature of the thermostat
+0.01         # precision for the radial distribution function
+END
+

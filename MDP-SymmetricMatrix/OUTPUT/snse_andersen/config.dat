@@ -1,0 +1,10 @@
+100         # Temperature of the initial melting
+100              # Meltin Velo Verlet Intagration Steps
+.TRUE.            # Print thermodynamic magnitudes
+100              # Number of iterations to measure thermodynamic mag.
+.TRUE.           # Compute the radial distribution function
+10             # Number of iterations to to compute the function
+.FALSE.           # Compute the time-evolution of the positions
+1000             # Number of iteratoins to to compute the position
+END
+
