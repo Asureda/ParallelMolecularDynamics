@@ -1,0 +1,51 @@
+{
+    "name": "Ubuntu-Jammy",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "jammy"
+        }
+    },
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "/bin/bash",
+                "icon": "terminal-bash"
+            }
+        },
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.linting.pylintPath": "/usr/bin/pylint",
+        "python.formatting.provider": "autopep8",
+        "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
+        "python.formatting.autopep8Args": ["--max-line-length", "88"],
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestPath": "/usr/bin/pytest",
+        "python.testing.pytestArgs": ["-v", "--color=yes", "--durations=0"],
+        "python.languageServer": "Pylance",
+        "python.analysis.typeCheckingMode": "off",
+        "python.analysis.autoImportCompletions": true,
+        "python.analysis.memory.keepLibraryAst": true,
+        "python.analysis.memory.keepLibraryConstants": true,
+        "fortran.linterPath": "/usr/bin/flang",
+        "make.linting.enable": true
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "krvajalm.linter-gfortran"
+    ],
+
+    "postCreateCommand": "chown -R mpi_nvt:mpi_nvt /home/mpi_nvt",
+    "workspaceFolder": "/home/mpi_nvt/workspace",
+    "mounts": [
+        {
+            "source": "${localWorkspaceFolder}",
+            "target": "/home/mpi_nvt/workspace",
+            "type": "bind",
+            "consistency": "cached"
+        }
+    ],
+}

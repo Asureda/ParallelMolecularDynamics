@@ -2,7 +2,7 @@
 
 
 # Compilador
-F90=ifort
+F90=gfortran
 
 # Main program
 TARGET=main

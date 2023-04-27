@@ -9,7 +9,7 @@ comp=mpifort
 TARGET=main
 
 # Optimitzador i Flags
-OPT=-O3 -g -debug all
+
 
 # Compilacio del main program
 $(TARGET) : read_data.o parallelization.o PBC.o Full_modul_Inicialitzar.o Full_Modul_Andersen.o Full_Modul_Distrib_Radial.o L_J.o  energy.o main_vars.o verlet.o sample.o $(TARGET).o 
