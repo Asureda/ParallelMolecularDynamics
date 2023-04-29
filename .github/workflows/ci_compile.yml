@@ -1,0 +1,20 @@
+name: CI compile
+
+on:
+  push:
+    branches:
+      - CI_install
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v2
+      - name: Ejecutar primer script
+        working-directory: ./MDS1
+        run: |
+          cd PROGRAM
+          chmod +x Makefile
+          make
+
