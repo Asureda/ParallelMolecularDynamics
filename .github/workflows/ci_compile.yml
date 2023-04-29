@@ -1,0 +1,26 @@
+name: CI compile
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v2
+      - name: Ejecutar primer script
+        working-directory: ./MDS1
+        run: |
+          chmod +x run.sh
+          ./run.sh
+      - name: Instalar MPI
+        run: |
+          sudo apt-get update && sudo apt-get install -y openmpi-bin libopenmpi-dev
+      - name: Ejecutar segundo script con MPI
+        working-directory: ./MDP-SymmetricMatrix
+        run: |
+          chmod +x run.sh
+          ./run.sh
