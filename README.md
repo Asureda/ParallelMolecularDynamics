@@ -1,4 +1,4 @@
-[![CI with install](https://github.com/Asureda/MPI-NVT/actions/workflows/ci_install.yml/badge.svg)]
+[![CI with install](https://github.com/Asureda/MPI-NVT/actions/workflows/ci_install.yml/badge.svg)](https://github.com/Asureda/MPI-NVT/actions/workflows/ci_install.yml)
 # Molecular Dynamics Simulations
 
 * Motivation
