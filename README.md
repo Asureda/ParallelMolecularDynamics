@@ -1,4 +1,4 @@
-[![CI with install](https://github.com/firstlightfusion/idom_reaction_chamber/actions/workflows/ci_with_install.yml/badge.svg)](https://github.com/Asureda/MPI-NVT/actions/workflows/docker-image.yml)
+[![CI with install](https://github.com/Asureda/MPI-NVT/actions/workflows/ci_install.yml/badge.svg)]
 # Molecular Dynamics Simulations
 
 * Motivation
