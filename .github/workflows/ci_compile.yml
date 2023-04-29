@@ -3,7 +3,7 @@ name: CI compile
 on:
   push:
     branches:
-      - main
+      - CI_install
 
 jobs:
   run-scripts:
