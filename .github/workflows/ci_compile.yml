@@ -14,7 +14,7 @@ jobs:
       - name: Ejecutar primer script
         working-directory: ./MDS1
         run: |
-          chmod +x run.sh
+          cd PROGRAM
           chmod +x Makefile
           make
 
