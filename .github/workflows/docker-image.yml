@@ -30,4 +30,5 @@ jobs:
         with:
           file: .devcontainer/Dockerfile
           push: true
-          tags: ghcr.io/Asureda/mpi_nvt
+          tags: ghcr.io/asureda/mpi_nvt
+
