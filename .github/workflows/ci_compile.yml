@@ -16,10 +16,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3  
-      - name: install dependencies
+      - name: Update packages
         run: |
-          apt update -y
-          apt-get install openmpi-bin libopenmpi-dev        
+          apt-get update
+          apt-get install -y --no-install-recommends openmpi-bin libopenmpi-dev
       - name: Ejecutar serial code
         working-directory: ./MDS1
         run: |
@@ -32,3 +32,4 @@ jobs:
           cd PROGRAM
           chmod +x Makefile
           make
+
