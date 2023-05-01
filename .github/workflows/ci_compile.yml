@@ -10,10 +10,12 @@ on:
       
 jobs:
   run-scripts:
+    container:
+    image: continuumio/miniconda3:4.12.0
     runs-on: ubuntu-latest
     steps:
       - name: Clonar repositorio
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         
       - name: install dependencies
         run: |
