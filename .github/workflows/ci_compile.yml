@@ -14,6 +14,11 @@ jobs:
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v2
+        
+      - name: install dependencies
+        run: |
+          apt update -y
+          apt-get install openmpi-bin libopenmpi-dev        
       - name: Ejecutar serial code
         working-directory: ./MDS1
         run: |
