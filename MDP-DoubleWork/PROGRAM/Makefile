@@ -18,7 +18,7 @@ $(TARGET) : read_data.o parallelization.o PBC.o Full_modul_Inicialitzar.o Full_M
 # Tots els fitxers amb extensio .f90 son compilats a objectes .o
 %.o : %.f90
 	@echo "From MAKEFILE. Compiling all modules"
-	$(comp) $(OPT) -c $<
+	$(comp) -c $<
 
 
 ## backup : fer una copia comprimida del codi basic
