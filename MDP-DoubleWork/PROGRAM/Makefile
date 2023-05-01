@@ -2,7 +2,7 @@
 
 
 # Compilador
-comp=mpifort
+comp=mpif90 
 
 # Main program
 TARGET=main
