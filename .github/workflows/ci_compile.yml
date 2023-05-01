@@ -1,20 +1,36 @@
-name: CI compile
+name: Fortran Compilation Workflow
 
 on:
   push:
-    branches:
-      - CI_install
+    branches: [ CI_new ]
+  pull_request:
+    branches: [ CI_new ]
 
 jobs:
-  run-scripts:
+  fortran-build:
     runs-on: ubuntu-latest
     steps:
-      - name: Clonar repositorio
-        uses: actions/checkout@v2
-      - name: Ejecutar primer script
-        working-directory: ./MDS1
-        run: |
-          cd PROGRAM
-          chmod +x Makefile
-          make
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
+    - name: Build Fortran
+      working-directory: ./MDS1
+      run: |
+        cd PROGRAM
+        make
+
+  mpi-fortran-build:
+    runs-on: ubuntu-latest
+    needs: fortran-build
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install OpenMPI
+      run: sudo apt-get update && sudo apt-get install -y openmpi-bin libopenmpi-dev
+
+    - name: Build MPI Fortran
+      working-directory: ./MDP-DoubleWork
+      run: |
+        cd PROGRAM
+        make
