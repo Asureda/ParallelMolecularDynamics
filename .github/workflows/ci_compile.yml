@@ -3,18 +3,26 @@ name: CI compile
 on:
   push:
     branches:
-      - CI_install
-
+      - CI_new
+  pull_request:
+    branches:
+      - CI_new
+      
 jobs:
   run-scripts:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v2
-      - name: Ejecutar primer script
+      - name: Ejecutar serial code
         working-directory: ./MDS1
         run: |
           cd PROGRAM
           chmod +x Makefile
           make
-
+      - name: Ejecutar mpi code
+        working-directory: ./MDP-DoubleWork
+        run: |
+          cd PROGRAM
+          chmod +x Makefile
+          make
