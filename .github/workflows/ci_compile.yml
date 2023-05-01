@@ -19,6 +19,7 @@ jobs:
       - name: Update packages
         run: |
           apt-get update
+          apt-get install build-essential
           apt-get install -y --no-install-recommends openmpi-bin libopenmpi-dev
       - name: Ejecutar serial code
         working-directory: ./MDS1
