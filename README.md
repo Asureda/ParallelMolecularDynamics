@@ -115,20 +115,6 @@ Outcome : 21 / 04 / 2020 (version 1.0)
 
 Last moified:  NONE (version --)
 
-## Authors ✒️
-
-* **Alexandre Sureda**
-* **Elena Ricart**
-* **Laia Navarro**
-* **Oriol Cabanas**
-* **Silvia Àlvarez**
-
-
-## Acknowledgments 🎁
-
-To Sergio Madurga, Romualdo Pastor and Juan Torras for guiding and helping us develop this project.
-To Barcelona Supercomputing Center-Centro Nacional de Supercomputación (BSC-CNS) for allowing us to perform calculations with their platforms.
-
 # Appendix
 * Input parameters
 * Speed up and running time recommendations
